@@ -35,10 +35,11 @@ section {
     border-radius: 5px;
     border: white 2px solid;
     transition: color 0.3s ease, background-color 0.3s ease;
+    margin-right: 25px;
 }
 .buttons button:first-child {
     background-color: white;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     color:#2C4251;
 }
 .buttons button:first-child:hover {
@@ -51,7 +52,7 @@ section {
 }
 .buttons button:last-child:hover:not([disabled="true"]) {
     background-color: white;
-    margin-right: 25px;
+    /* margin-right: 25px; */
     color:#2C4251;
 }
 button[disabled="true"] {
@@ -62,14 +63,12 @@ button[disabled="true"] {
   -webkit-print-color-adjust: exact !important;
   print-color-adjust: exact !important;
   max-width: 800px;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
+  border: 2px solid;
+  border-left: none;
   margin: 50px auto;
 }
 .card header {
-  background-color: #ddd;
-  border-top: 2px solid black;
-  border-left: 2px solid black;
+  border-left: 2px solid;
   text-align: center;
   padding: 25px;
   position: relative;
@@ -80,6 +79,10 @@ button[disabled="true"] {
   font-style: normal;
   font-size: 42px;
   margin: 0;
+}
+.card h2 {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 200;
 }
 .card .no {
   position: absolute;
@@ -97,7 +100,20 @@ button[disabled="true"] {
 }
 
 .cell {
-  border: 2px solid black;
+  border: 2px solid;
+  border-right: none;
+  border-bottom: none;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  width: 160px;
+  font-family: sans-serif;
+}
+
+.titleCell {
+  border: 2px solid;
   border-right: none;
   border-bottom: none;
   text-align: center;
@@ -106,10 +122,6 @@ button[disabled="true"] {
   align-items: center;
   padding: 25px;
   font-family: sans-serif;
-  background-color: #fff;
-}
-.cell:nth-child(odd) {
-  background-color: #ddd;
 }
 
 .validation:has(li) {

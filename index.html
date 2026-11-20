@@ -1,80 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bingo Generator</title>
+    <title>Bingo Card Generator</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="https://fav.farm/🎲" />
   </head>
   <body>
-    <header class="site-header">
-        Bingo Card Generator
-    </header>
+    <header class="site-header">Bingo Card Generator</header>
     <section id="settings">
-      <label for="values"
-        >Enter Cell Values* <small>(Each cell on it's own line)</small></label
+      <label
+        >Enter Cell Titles And Values*
+        <small
+          >(Each cell on its own line, cells will appear in their columns in
+          random order)</small
+        ></label
       >
+      <input
+        class="columnLabelInput"
+        type="text"
+        id="column0Label"
+        placeholder="First Column Label"
+        value="Bach"
+      />
       <textarea
-        name="values"
-        id="values"
+        name="valuesColumn0"
+        id="valuesColumn0"
+        class="columnValues"
         cols="30"
         rows="10"
-        placeholder="Paste/type your 25 values with each value on it's own line."
-      >Imagine - John Lennon
-Bohemian Rhapsody - Queen
-Hey Jude - The Beatles
-Like a Rolling Stone - Bob Dylan
-(I Can't Get No) Satisfaction - The Rolling Stones
-Respect - Aretha Franklin
-What a Wonderful World - Louis Armstrong
-A Change is Gonna Come - Sam Cooke
-Johnny B. Goode - Chuck Berry
-Over the Rainbow - Judy Garland
-Billie Jean - Michael Jackson
-Sweet Child o' Mine - Guns N' Roses
-Hotel California - Eagles
-Stairway to Heaven - Led Zeppelin
-I Will Always Love You - Whitney Houston
-Bohemian Like You - The Dandy Warhols
-Hallelujah - Leonard Cohen
-Smells Like Teen Spirit - Nirvana
-Don't Stop Believin' - Journey
-Mr. Brightside - The Killers
-Dancing Queen - ABBA
-Can't Stop the Feeling! - Justin Timberlake
-Uptown Funk - Mark Ronson ft. Bruno Mars
-Thinking Out Loud - Ed Sheeran
-Perfect - Ed Sheeran
-A Sky Full of Stars - Coldplay
-Roar - Katy Perry
-Somebody That I Used to Know - Gotye ft. Kimbra
-Rolling in the Deep - Adele
-Someone You Loved - Lewis Capaldi
-Bad Guy - Billie Eilish
-Old Town Road (Remix) - Lil Nas X ft. Billy Ray Cyrus
-Bohemian Rhapsody (2018 Version) - Queen
-Shallow - Lady Gaga & Bradley Cooper
-Lose Yourself - Eminem
-Uptown Funk (Live) - Mark Ronson ft. Bruno Mars & Mark Morrison
-I Wanna Dance With Somebody (Who Loves Me) - Whitney Houston
-I Kissed a Girl - Katy Perry
-Happy - Pharrell Williams
-Thrift Shop - Macklemore & Ryan Lewis
-Uptown Funk (Live) - Mark Ronson ft. Bruno Mars & Mark Morrison
-Can't Stop the Feeling! (Live) - Justin Timberlake
-Thinking Out Loud (Live) - Ed Sheeran
-Perfect (Live) - Ed Sheeran
-A Sky Full of Stars (Live) - Coldplay
-Roar (Live) - Katy Perry
-Somebody That I Used to Know (Live) - Gotye ft. Kimbra
-Rolling in the Deep (Live) - Adele
-Someone You Loved (Live) - Lewis Capaldi
-Bad Guy (Live) - Billie Eilish</textarea>
+        placeholder="Paste/type your 5 values with each value on it's own line."
+      >
+Brandenburg Concerto - Johann Sebastian Bach
+Toccata and Fugue in D Minor - Johann Sebastian Bach
+Cello Suite No. 1 in G Major - Johann Sebastian Bach
+Goldberg Variations - Johann Sebastian Bach
+Air on the G String - Johann Sebastian Bach</textarea
+      >
+      <input
+        class="columnLabelInput"
+        type="text"
+        id="column1Label"
+        placeholder="Second Column Label"
+        value="Mozart"
+      />
+      <textarea
+        class="columnValues"
+        name="valuesColumn1"
+        id="valuesColumn1"
+        cols="30"
+        rows="10"
+        placeholder="Paste/type your 5 values with each value on it's own line."
+      >
+Symphony No. 40 in G Minor - Wolfgang Amadeus Mozart
+Eine kleine Nachtmusik - Wolfgang Amadeus Mozart
+Requiem in D Minor - Wolfgang Amadeus Mozart
+Piano Concerto - Wolfgang Amadeus Mozart
+The Marriage of Figaro Overture - Wolfgang Amadeus Mozart</textarea
+      >
+      <input
+        class="columnLabelInput"
+        type="text"
+        id="column2Label"
+        placeholder="Third Column Label"
+        value="Beethoven"
+      />
+      <textarea
+        class="columnValues"
+        name="valuesColumn2"
+        id="valuesColumn2"
+        cols="30"
+        rows="10"
+        placeholder="Paste/type your 5 values with each value on it's own line."
+      >
+Symphony No. 5 in C Minor - Ludwig van Beethoven
+Symphony No. 9 in D Minor - Ludwig van Beethoven
+Piano Sonata No. 14 in C-sharp Minor - Ludwig van Beethoven
+Fur Elise - Ludwig van Beethoven
+Symphony No. 6 in F Major - Ludwig van Beethoven</textarea
+      >
+      <input
+        class="columnLabelInput"
+        type="text"
+        id="column3Label"
+        placeholder="Fourth Column Label"
+        value="Tchaikovsky"
+      />
+      <textarea
+        class="columnValues"
+        name="valuesColumn3"
+        id="valuesColumn3"
+        cols="30"
+        rows="10"
+        placeholder="Paste/type your 5 values with each value on it's own line."
+      >
+Swan Lake Suite - Pyotr Ilyich Tchaikovsky
+The Nutcracker Suite - Pyotr Ilyich Tchaikovsky
+1812 Overture - Pyotr Ilyich Tchaikovsky
+Piano Concerto No. 1 in B-flat Minor - Pyotr Ilyich Tchaikovsky
+Symphony No. 6 in B Minor - Pyotr Ilyich Tchaikovsky</textarea
+      >
+      <input
+        class="columnLabelInput"
+        type="text"
+        id="column4Label"
+        placeholder="Fifth Column Label"
+        value="Chopin"
+      />
+      <textarea
+        class="columnValues"
+        name="valuesColumn4"
+        id="valuesColumn4"
+        cols="30"
+        rows="10"
+        placeholder="Paste/type your 5 values with each value on it's own line."
+      >
+Nocturne in E-flat Major - Frederic Chopin
+Prelude in D-flat Major - Frederic Chopin
+Ballade No. 1 in G Minor - Frederic Chopin
+Waltz in D-flat Major - Frederic Chopin
+Etude in C Minor - Frederic Chopin</textarea
+      >
       <label for="numCards">Number of Cards*</label>
       <input
         type="number"
-        min="1"
+        min="0"
         name="numCards"
         id="numCards"
         value="1"
@@ -89,26 +140,95 @@ Bad Guy (Live) - Billie Eilish</textarea>
         value="1"
         required
       />
-      <label for="cardTitle">Card Title</label>
+      <label for="cardTitle">Card Title*</label>
       <input
         type="text"
         min="1"
         name="cardTitle"
         id="cardTitle"
-        placeholder="Leave blank for Bingo"
+        value="Bingo"
+        required
+      />
+      <label for="useColumnHeadings">
+        <input
+          type="checkbox"
+          name="useColumnHeadings"
+          id="useColumnHeadings"
+          checked="true"
+        />
+        Use Column Headings
+      </label>
+      <label for="showCardColorCheck">
+        <input
+          type="checkbox"
+          name="showCardNo"
+          id="showCardNo"
+          checked="true"
+        />
+        Show Card Number
+      </label>
+      <label for="middleCellFree">
+        <input
+          type="checkbox"
+          name="middleCellFree"
+          id="middleCellFree"
+          checked="true"
+        />
+        Free Middle Cell
+      </label>
+      <label for="titleBgColor">Title Background Color</label>
+      <input
+        type="color"
+        id="titleBgColor"
+        name="titleBgColor"
+        value="#dddddd"
+      />
+      <label for="headingCellsBgColor">Heading Cells Background Color</label>
+      <input
+        type="color"
+        id="headingCellsBgColor"
+        name="headingCellsBgColor"
+        value="#808080"
+      />
+      <label for="cardTextColor">Card Text Color</label>
+      <input
+        type="color"
+        id="cardTextColor"
+        name="cardTextColor"
+        value="#000000"
+      />
+      <label for="borderColor">Border Color</label>
+      <input type="color" id="borderColor" name="borderColor" value="#000000" />
+      <label for="evenCellColor">Even Cell Background Color</label>
+      <input
+        type="color"
+        id="evenCellColor"
+        name="evenCellColor"
+        value="#ffffff"
+      />
+      <label for="oddCellColor">Odd Cell Background Color</label>
+      <input
+        type="color"
+        id="oddCellColor"
+        name="oddCellColor"
+        value="#dddddd"
       />
       <div class="buttons">
         <button id="generate">Generate</button>
         <button id="print" disabled="true">Print Cards</button>
+        <button id="clearAll">Clear All</button>
       </div>
       <ul class="validation" id="validation"></ul>
     </section>
-    <section id="cards">
-    </section>
+    <section id="cards"></section>
     <footer class="site-footer">
-        <a href="https://github.com/jeffhow/bingo-card-generator" title="Get the code" target="_blank">
-            <img src="github-mark-white.png" alt="GitHub Logomark" width="40">
-        </a>
+      <a
+        href="https://github.com/jeffhow/bingo-card-generator"
+        title="Get the code"
+        target="_blank"
+      >
+        <img src="github-mark-white.png" alt="GitHub Logomark" width="40" />
+      </a>
     </footer>
     <script src="app.js"></script>
   </body>
